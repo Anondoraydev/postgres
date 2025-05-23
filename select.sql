@@ -372,3 +372,23 @@ SELECT * FROM students WHERE first_name LIKE '___ir';
 SELECT * FROM students WHERE first_name LIKE '___ir__';
 
 SELECT * FROM students WHERE first_name ILIKE 't%';
+
+SELECT * FROM students LIMIT 5;
+
+SELECT * FROM students LIMIT 5 OFFSET 2;
+
+SELECT *
+FROM students
+WHERE
+    country IN ('Pakistan', 'India')
+LIMIT 5;
+
+SELECT * FROM students LIMIT 5 OFFSET 5 * 0;
+
+SELECT * FROM students LIMIT 5 OFFSET 5 * 1;
+
+SELECT * FROM students LIMIT 5 OFFSET 5 * 2;
+
+DELETE FROM students WHERE grade = 'B';
+
+DELETE FROM students WHERE grade = 'C' AND country = 'Bangladesh';

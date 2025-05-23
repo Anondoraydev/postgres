@@ -38,5 +38,4 @@ DROP TABLE person2;
 TRUNCATE TABLE person2;
 
 -- person2 টেবিলে একটি নতুন রো (row) ইনসার্ট করো
-INSERT INTO person2 VALUES (8, 'test', 45, 'test@gmail.com');
-https://github.com/Apollo-Level2-Web-Dev/B5_PSQL_Go-To-Queries.githttps://github.com/Apollo-Level2-Web-Dev/B5_PSQL_Go-To-Queries.githttps://github.com/Apollo-Level2-Web-Dev/B5_PSQL_Go-To-Queries.git
+INSERT INTO person2 VALUES ( 8, 'test', 45, 'test@gmail.com' );
