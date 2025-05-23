@@ -271,3 +271,34 @@ SELECT DISTINCT blood_group FROM students;
 SELECT * FROM students WHERE country = 'India';
 
 SELECT * FROM students WHERE grade = 'A' AND course = 'Physics';
+
+SELECT * FROM students WHERE blood_group = 'A+';
+
+SELECT *
+FROM students
+WHERE (
+        country = 'India'
+        OR country = 'Bangladesh'
+    )
+    AND age = 20;
+
+SELECT *
+FROM students
+WHERE (
+        country = 'India'
+        OR country = 'Bangladesh'
+    );
+
+SELECT * FROM students WHERE age > 20;
+
+SELECT * FROM students WHERE age < 20;
+
+SELECT * FROM students WHERE age > 20 AND course = 'Biology';
+
+SELECT * FROM students WHERE age <= 20 AND course = 'History';
+
+SELECT * FROM students WHERE age != 20;
+
+SELECT * FROM students WHERE country <> 'Pakistan';
+
+SELECT * FROM students WHERE age >= 20 AND course = 'History';
