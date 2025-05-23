@@ -9,7 +9,7 @@ CREATE TABLE students (
     dob DATE,
     blood_group VARCHAR(6),
     country VARCHAR(50)
-)
+);
 
 INSERT INTO
     students (
@@ -40,7 +40,7 @@ VALUES (
         22,
         'B',
         'Mathematics',
-        'karim@example.com',
+        NULL,
         '2003-06-25',
         'B+',
         'Bangladesh'
@@ -84,7 +84,7 @@ VALUES (
         23,
         'A-',
         'Economics',
-        'mehedi@example.com',
+        NULL,
         '2002-04-07',
         'A-',
         'Bangladesh'
@@ -117,7 +117,7 @@ VALUES (
         19,
         'C+',
         'Accounting',
-        'shila@example.com',
+        NULL,
         '2006-05-30',
         'A+',
         'India'
@@ -161,7 +161,7 @@ VALUES (
         18,
         'A',
         'Political Science',
-        'laboni@example.com',
+        NULL,
         '2007-06-22',
         'B+',
         'Bangladesh'
@@ -238,7 +238,7 @@ VALUES (
         23,
         'C',
         'Environmental Science',
-        'babu@example.com',
+        NULL,
         '2002-09-01',
         'O+',
         'Bangladesh'
@@ -302,3 +302,38 @@ SELECT * FROM students WHERE age != 20;
 SELECT * FROM students WHERE country <> 'Pakistan';
 
 SELECT * FROM students WHERE age >= 20 AND course = 'History';
+
+SELECT upper(first_name) as first_name_in_uppercase, * FROM students;
+
+SELECT concat(first_name, ' ', last_name) FROM students;
+
+SELECT length(first_name) FROM students;
+
+SELECT avg(age) FROM students;
+
+SELECT max(age) FROM students;
+
+SELECT min(age) FROM students;
+
+SELECT sum(age) FROM students;
+
+SELECT count(*) FROM students;
+
+SELECT max(length(first_name)) FROM students;
+
+SELECT * FROM students WHERE NOT country = 'Bangladesh'
+
+SELECT NULL = NULL;
+
+SELECT * FROM students WHERE email IS NULL;
+
+SELECT * FROM students;
+
+SELECT COALESCE(email, 'email not provided') FROM students;
+
+SELECT
+    COALESCE(email, 'email not provided') as "EMAIL",
+    age,
+    first_name,
+    last_name
+FROM students;
