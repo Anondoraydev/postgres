@@ -337,3 +337,38 @@ SELECT
     first_name,
     last_name
 FROM students;
+
+SELECT *
+FROM students
+WHERE
+    country = 'Pakistan'
+    OR country = 'Nepal';
+
+SELECT * FROM students WHERE country IN ('Pakistan', 'India');
+
+SELECT * FROM students WHERE country NOT IN ('Pakistan', 'India');
+
+SELECT * FROM students WHERE age BETWEEN 19 AND 22;
+
+SELECT *
+FROM students
+WHERE
+    dob BETWEEN '200-01-01' AND '2005-01-01';
+
+SELECT *
+FROM students
+WHERE
+    dob BETWEEN '2000-01-01' AND '2005-01-01 '
+ORDER BY dob;
+
+SELECT * FROM students WHERE first_name LIKE '%ir';
+
+SELECT * FROM students WHERE first_name LIKE 'T%';
+
+SELECT * FROM students WHERE first_name LIKE '_a%';
+
+SELECT * FROM students WHERE first_name LIKE '___ir';
+
+SELECT * FROM students WHERE first_name LIKE '___ir__';
+
+SELECT * FROM students WHERE first_name ILIKE 't%';
