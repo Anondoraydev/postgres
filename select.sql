@@ -11,10 +11,8 @@ CREATE TABLE students (
     country VARCHAR(50)
 )
 
-
 INSERT INTO
-
-    student (
+    students (
         first_name,
         last_name,
         age,
@@ -246,6 +244,30 @@ VALUES (
         'Bangladesh'
     );
 
-SELECT FROM students;
+SELECT * FROM students;
 
+SELECT first_name FROM students;
 
+SELECT age, email FROM students;
+
+SELECT email as "Student Email" FROM students;
+
+SELECT email as "Student Email", age FROM students;
+
+SELECT * FROM students ORDER BY first_name ASC;
+
+SELECT * FROM students ORDER BY first_name DESC;
+
+SELECT * FROM students ORDER BY age DESC;
+
+SELECT * FROM students ORDER BY dob DESC;
+
+SELECT * FROM students ORDER BY dob ASC;
+
+SELECT DISTINCT country FROM students;
+
+SELECT DISTINCT blood_group FROM students;
+
+SELECT * FROM students WHERE country = 'India';
+
+SELECT * FROM students WHERE grade = 'A' AND course = 'Physics';
