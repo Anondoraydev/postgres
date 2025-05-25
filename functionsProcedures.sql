@@ -82,6 +82,7 @@ $$
         DELETE FROM employees WHERE employee_id = test_var;
 
         RAISE NOTICE 'Employee removed successfully!';
+        
     END
 $$;
 
